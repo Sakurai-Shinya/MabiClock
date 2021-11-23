@@ -1,0 +1,37 @@
+﻿<Window x:Class="MabiClock.Windows.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+		ShowInTaskbar="False"
+		ResizeMode="NoResize"
+		Closing="Window_Closing"
+		WindowStartupLocation="CenterScreen"
+		
+        Title="MabiClock - 設定" Height="426" Width="600">
+	<Grid>
+		<TextBlock Margin="10,10,10,0" TextWrapping="NoWrap" Text="設定" FontSize="24" VerticalAlignment="Top"/>
+
+
+		<GroupBox Header="ウィンドウ表示" Margin="20,60,20,0" Height="84" VerticalAlignment="Top">
+			<Grid Margin="10">
+				<CheckBox x:Name="TopMostCheckBox" Margin="10,10,0,0" Content="最前面に表示" HorizontalAlignment="Left" Width="89" Height="15" VerticalAlignment="Top"/>
+			</Grid>
+		</GroupBox>
+		<GroupBox Header="時間設定" Margin="20,149,20,0" Height="121" VerticalAlignment="Top">
+			<Grid Margin="10">
+				<TextBlock Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="NoWrap" Text="マビノギサーバーの時間とコンピューターの時間のずれ秒数"/>
+				<TextBlock Margin="10,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="NoWrap" Text="マビノギよりMabiClockが速い場合はマイナスを指定します"/>
+				<TextBox x:Name="TimeGapTextBox" Margin="10,50,27,10" VerticalAlignment="Top" TextWrapping="Wrap" Text="0.0" TextAlignment="Right"/>
+				<TextBlock Margin="0,50,10,0" VerticalAlignment="Top" TextWrapping="NoWrap" Text="秒" RenderTransformOrigin="-0.167,0.068" HorizontalAlignment="Right" Width="12"/>
+			</Grid>
+		</GroupBox>
+		<GroupBox Header="終了" Margin="20,275,20,0" Height="100" VerticalAlignment="Top">
+			<Grid Margin="10">
+				<Button x:Name="ExitButton" Content="終了" Margin="10,10,10,10" Background="White" Click="ExitButton_Click"/>
+
+			</Grid>
+		</GroupBox>
+	</Grid>
+</Window>
